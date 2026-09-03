@@ -1,0 +1,101 @@
+/*Limpar formatações do navegador*/
+*{
+    margin:0; /*Remove os espaçamentos externos*/
+    padding:0; /*Remove os preenchimentos internos*/
+    box-sizing: border-box; /*Garante que as bordas e paddings não aumentem o tamanho total do elemento*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*Define as fontes para todos os elementos*/
+}
+
+/*Armazenar variáveis globais de css para fácil reutilização*/
+:root{
+    --primary-color: #ff7e5f;
+    --primary-hover: #eb6b4c;
+    --secondary-color: #feb47b;
+    --dark-color: #2c3e50;
+    --light-color: #f9f9fb;
+    --white: #ffffff;
+    --gray: #666666;
+    --border-radius: 12px;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+body{
+    background-color: var(--light-color); /*Cor de fundo da página*/
+    color: var(--dark-color); /*Cor do texto*/
+    line-height: 1.6; /*Espaçamento entre as linhas de texto*/
+    display: flex; /*Atvia flexbox | Posicionamento dos elementos - container*/
+    flex-direction: column; /*Organizar os elementos dentro do container*/
+    min-height: 100vh; /*Garante 100% da altura da tela do dispostivo*/
+}
+
+header{
+    background-color: var(--white); /*Fundo branco no topo da página*/
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /*Sombra bem leve na parte inferior do topo*/
+    position: sticky; /*O menu fica fixo*/
+    top: 0; /*Gruda a barra de rolagem exatamente no topo*/
+    z-index: 1000; /*Garante que o menu fique acima de todos os outros elementos*/
+}
+
+nav{
+    max-width: 1200px; /*Largura máxima do menu*/
+    margin: 0 auto; /*Centralizar o menu*/
+    display: flex;
+    justify-content: space-between; /*Logo (imagem) - esquerda | Os links - direita*/
+    align-items: center;/*Alinhamentos do texto centralizado*/
+    padding: 1rem 2rem; /*Espaçamento interno*/
+}
+
+.nav-menu{
+    display: flex;
+    flex-direction: row;
+    list-style: none; /*Remove os pontos da lista*/    
+    gap: 1.5rem;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+    transition: color 0.3s ease, backgroun-color 0.3s ease; /*Transição suave das cores ao passar o mouse no elemento*/
+}
+
+.nav-link:hover, .nav-link:active{
+    color: var(--primary-color);
+    background-color: #fff4f1;
+}
+
+.logo-icon{
+    width: 32px; /*Largura*/
+    height: 32px; /*Altura*/
+}
+
+.logo{
+    font-size: 1.6rem; /*Tamanho da fonte do texto da logo*/
+    font-weight: 700; /*Negrito no texto*/
+    color: var(--primary-color);
+    text-decoration: none; /*Tira o sublinhado do texto do link*/
+    display: flex;
+    align-items: center;
+    gap: 8px; /*Espaço entre a imagem e o texto*/
+}
+
+.main{
+    flex: 1; /*Cescer e empurrar o rodapé*/
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem; 
+}
+
+.hero{
+    background-color: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 4rem 2 rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    box-shadow: var(--shadow);
+}
