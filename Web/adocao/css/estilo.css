@@ -62,7 +62,7 @@ nav{
     transition: color 0.3s ease, backgroun-color 0.3s ease; /*Transição suave das cores ao passar o mouse no elemento*/
 }
 
-.nav-link:hover, .nav-link:active{
+.nav-link:hover, .nav-link.active{
     color: var(--primary-color);
     background-color: #fff4f1;
 }
@@ -91,11 +91,128 @@ nav{
 }
 
 .hero{
-    background-color: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: var(--white);
+    background-color: linear-gradient(135deg, black, white);
+    color: var(--dark-color);
     border-radius: var(--border-radius);
-    padding: 4rem 2 rem;
+    padding: 4rem 2rem;
     text-align: center;
     margin-bottom: 3rem;
     box-shadow: var(--shadow);
+}
+
+
+
+.btn-primary{
+    background-color: var(--white);
+    color: var(--primary-color);
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer; /* Transforma o ponteiro do mouse em mão */
+    transition: all 0.3s ease; /* Suavisa o efeito hover do botão */ 
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary:hover{
+    transform: translateY(-2px); /* Levanta o botão 2px para cima; */
+    box-shadow: 0 5px 15px rgb(0,0,0,0.15);
+}
+
+footer{
+    background-color: var(--dark-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+footer p{
+    font-size: 0.9rem;
+    opacity: 0.8;
+
+}
+
+/* Parte central da página animais.html */
+
+.card-grid{
+    display: grid; /* Ativa CSS Grid */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Cria automaticamente colunas de 280px */
+    gap: 2rem;
+}
+
+.card{
+    background-color: var(--white);
+    border-radius: var(--border-radius); 
+    overflow: hidden; /* Faz com que o conteúdo interno não ultrapasse as bordas */
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.card:hover{
+    transform: translateY(-5);
+}
+
+.card-img-placeholder{
+    width: 100%;
+    height: 200px;
+    background-color: #dfdbdb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+
+}
+
+.card-img-placeholder img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: var(--border-radius) var(--border-radius) 0 0; 
+}
+
+.card-body{
+    padding: 1.5rem;
+}
+
+.card-tag{
+    display: inline-block;
+    background-color: #fff4f1;
+    color: var(--primary-color);
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-text{
+    color: var(--gray);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.card-title{
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem; 
+}
+
+.btn-card{
+    display: block;
+    text-align: align;
+    width: 100%;
+    padding: 0.6rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 0.59rem;
+}
+
+.animal-title{
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 0.8rem;
 }
