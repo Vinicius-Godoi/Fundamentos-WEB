@@ -304,3 +304,33 @@ form input[type="submit"]:hover {
 form input[type="submit"]:active {
     transform: scale(0.98);
 }
+
+/*Sobre*/
+
+.main-sobre {
+    max-width: 680px;         
+    margin: 40px auto;         
+    padding: 40px;             
+    background-color: #ffffff; 
+    border-radius: 12px;        
+}
+
+.main-sobre h2 {
+    color: #cc6b49;            
+    font-size: 1.8rem;         
+    font-weight: 600;
+    margin-bottom: 24px;       
+    text-align: left;          
+}
+
+.main-sobre p {
+    color: #555555;            
+    font-size: 1rem;
+    line-height: 1.8;          
+    margin-bottom: 20px;       
+}
+
+/* Remove a margem do último parágrafo */
+.main-sobre p:last-child {
+    margin-bottom: 0;
+}
