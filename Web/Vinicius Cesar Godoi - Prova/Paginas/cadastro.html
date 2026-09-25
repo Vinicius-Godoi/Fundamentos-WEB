@@ -1,0 +1,82 @@
+<!-- Página Cadastro -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="SHORTCUT ICON" href="../favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="../Estilo/estilo.css">
+        <title>Cadastro | Cafeteria Aroma & Sabor</title>
+    </head>
+    <body>
+        <div class="page-container">
+            <header class="page-header">
+            <!-- Logo e Título -->
+            <a class="logo" href="index.html">
+                <img class="img-logo" src="../Imagens/logo.png" alt="logo"> Cafeteria aroma & sabor
+            </a>
+            <!-- Menu de Navegação -->
+            <nav >
+                <ul class="nav-menu">
+                    <!-- Cardápio -->
+                    <li>
+                        <a class="nav-link" href="../index.html">Cardápio</a>
+                    </li>
+                    <!-- Comanda -->
+                    <li>
+                        <a class="nav-link" href="comanda.html">Comanda</a>
+                    </li>
+                    <!-- Cadatro -->
+                    <li>
+                        <a class="nav-link" href="cadastro.html">Cadastro</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+            <main>
+                <!-- Título -->
+                <div>
+                    <h2>Cadastro de Cliente / Fidelidade</h2>
+                </div>
+
+                <!-- Formulário de Cadastro -->
+                <form>
+                    <!-- Nome Completo -->
+                    <div>
+                        <label>Nome Completo</label>
+                        <input type="text" placeholder="Digite seu nome" required>
+                    </div>
+                    <!-- E-mail -->
+                    <div>
+                        <label>E-mail</label>
+                        <input type="email" placeholder="seu@email.com" required>
+                    </div>
+                    <!-- Telefone -->
+                    <div>
+                        <label>Telefone / Whatsapp</label>
+                        <input type="text" placeholder="(00) 00000-0000" required>
+                    </div>
+                    <!-- Opção -->
+                    <div>
+                        <label>Como prefere nos visitar?</label>
+                        <select required>
+                            <option>Consumo no Salão</option>
+                            <option>Retirada Rápida no Balcão</option>
+                            <option>Delivery</option>
+                        </select>
+                    </div>
+
+                    <input type="submit" value="Cadastrar no Clube do Café">
+                </form>
+            </main>
+
+            <footer>
+                <p>
+                    &copy 2026 Cafeteria Aroma & Sabor - Todos os direitos reservados.
+                </p>
+            </footer>
+        </div>
+    </body>
+</html>
