@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="style.css">
+        <title>Primeiro JavaScript</title>
+    </head>
+    <body>
+        <h1>Bem-vindo(a) ao mundo javascript</h1>
+        <button id="b1" onClick="mudar_tema()">Tema Escuro</button>
+
+        <script>
+            function mudar_tema(){
+                var botao = document.getElementById("b1");
+                var cor_fundo = getComputedStyle(document.body).backgroundColor;
+
+                if(cor_fundo == 'rgb(255, 255, 255)'){
+                    console.log("True If")
+                    // Mudar o tema para escuro
+                    document.body.style = "background-color:black;color:white;";
+                    botao.style = "background-color:white;color:black;";
+                    botao.textContent = "Tema Claro";
+                }
+                else{
+                    console.log("False If")                   
+                    // Mudar o tema para claro
+                    document.body.style = "background-color:white;color:black;";
+                    botao.style = "background-color:black;color:white;";
+                    botao.textContent = "Tema Escuro";
+                }
+            }
+        </script>
+    </body>
+</html>
