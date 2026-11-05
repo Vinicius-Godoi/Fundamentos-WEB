@@ -1,0 +1,11 @@
+h2, label{
+    color: blue;
+}
+input{
+    border: 1px solid blue;
+}
+button{
+    background-color: blue;
+    color:white;
+    width: 120px;
+}
