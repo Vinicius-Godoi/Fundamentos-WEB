@@ -6,7 +6,7 @@
     <title>Fundamentos WEB</title>
 </head>
 <body>
-    <a href="js/Exercicios/ex1/index.html">Ex1</a>
+    <a href="index.html">Projetos</a>
 </body>
 </html>
 
