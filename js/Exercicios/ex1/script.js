@@ -39,8 +39,8 @@ function calcular(){
         let premio3 = (ponto3.value * premio.value) / soma; 
 
         // Saída
-        document.querySelector("div").innerHTML = `1º Lugar: R$${premio1}<br>
-                                                   2º Lugar: R$${premio2}<br>
-                                                   3º Lugar: R$${premio3}`;
+        document.querySelector("div").innerHTML = `1º Lugar: R$${premio1.toFixed(2)}<br>
+                                                   2º Lugar: R$${premio2.toFixed(2)}<br>
+                                                   3º Lugar: R$${premio3.toFixed(2)}`;
     }
 }
