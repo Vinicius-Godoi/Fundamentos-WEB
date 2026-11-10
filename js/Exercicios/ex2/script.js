@@ -33,7 +33,7 @@ function calcular(){
         let media = (Number(nota1) + Number(nota2)) / 2;
     
         document.getElementById("situacao").innerHTML = `Aluno: ${aluno}<br>
-                                                           Média: ${media}<br>
+                                                           Média: ${media.toFixed(1)}<br>
                                                            Situação: ${situacaoFinal(media)}`; 
     }
     
