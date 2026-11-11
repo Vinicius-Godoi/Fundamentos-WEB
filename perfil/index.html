@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meu Cartão Pessoal</title>
+        <link rel="SHORTCUT ICON" href="https://cdn-icons-png.flaticon.com/128/2292/2292038.png" type="image/x-icon">
+
+        <style>
+            .foto-perfil{
+                border-radius:50%; /*serve para definir o ângulo da borda*/
+                width: 200px; /*Largura*/
+                height: 200px; /*Altura*/
+                object-fit: cover; /*Ajusta a imagem para não ser distorcida ao mudar suas dimensões*/
+            }
+
+            .icones-redes{
+                width: 24px;
+                height: 24px;
+                vertical-align: middle;
+                margin-right: 8px;
+            }
+            
+            ul{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            body{
+                font-family:Arial, sans-serif;
+                background-color: #fcd59a;
+                text-align: center;
+                padding: 20px;
+                margin: 0;
+            }
+
+            li{
+                margin-bottom: 12px;
+            }
+
+            .cartao{
+                background-color: #f7e48d;
+                max-width: 500px;
+                margin:0 auto;
+                padding: 30px;
+                border-radius: 12px;
+            }
+
+            h1, h2, h3{
+                color: #d68902;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="cartao">
+            <!--Tags Semânticas servem para organizar o script HTML: Header, Section, Footer.-->
+            <header>
+                <img class="foto-perfil" title="Maria Da Silva" alt="Foto do perfil"
+                src="https://img.magnific.com/fotos-premium/uma-mulher-de-negocios-elegante-e-confiante-a-sorrir_589812-528.jpg?semt=ais_hybrid&w=740&q=80">
+
+                <h1>Maria</h1>
+
+                <p>
+                    Desenvolvedor Web em Formação - Mauá,SP
+                </p>
+
+            </header>
+            <hr>
+
+            <!--Sobre a pessoa-->
+            <section>
+                <h2>Sobre Mim</h2>
+
+                <p>
+                    Olá, sou apaixonada por tecnologia, café e música. Atualmente estou aprendendo a criar páginas para web com HTML e CSS básico.
+                </p>
+
+            </section>
+
+            <!--Interesses Pessoais-->
+            <section>
+                <h3>Meus hobbies</h3>
+
+                <!--Para listas ordenadas: ol(ordened list), ul(unordened list)-->
+                <ul>
+
+                    <!--li: list item-->
+                    <li>Programar pequenos projetos</li>
+                    <li>Jogar videogame nos finais de semana</li>
+                    <li>Tocar violão</li>
+                    <li>Assitir séries de ficção científica</li>
+
+                </ul>
+
+            </section>
+            <hr>
+
+            <!--Conecte-se comigo-->
+            <section>
+                <h2>Conecte-se comigo</h2>
+
+                <ul>
+                    <!--Linkedin-->
+                    <li>
+                        <!--target="_blank": abre o link em outra página do navegador, ao invés de sobrepor a página atual-->
+                        <a href="https://www.linkedin.com/" target="_blank">
+                            <img class="icones-redes" title="Linkedin" src="https://cdn-icons-png.flaticon.com/128/3536/3536505.png" 
+                            height="50px" width="50px" alt="Logo Linkedin">
+                        </a>
+                    </li>
+                    <br>
+
+                    <!--Github-->
+                    <li>
+                        <a href="https://www.github.com/" target="_blank">
+                            <img class="icones-redes" title="Github" src="https://cdn-icons-png.flaticon.com/128/2111/2111425.png" 
+                            height="50px" width="50px" alt="Logo Github">
+                        </a>
+                    </li>
+                    <br>
+
+                    <!--instagram-->
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <img class="icones-redes" title="Instagram" src="https://cdn-icons-png.flaticon.com/128/174/174855.png" 
+                            height="50px" width="50px" alt="Logo Instagram">
+                        </a>
+                    </li>
+
+                </ul>
+
+            </section>
+
+            <footer>
+                <p>
+                    <!--&copy;: serve para adcionar o símbolo de copyright ao texto-->
+                    &copy;2026 Suzane Von Richthofen, cirado durante a aula de fundamentos da web.
+                </p>
+            </footer>
+        </div>
+    </body>
+
+</html>

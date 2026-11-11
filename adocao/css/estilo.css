@@ -1,0 +1,336 @@
+/*Limpar formatações do navegador*/
+*{
+    margin:0; /*Remove os espaçamentos externos*/
+    padding:0; /*Remove os preenchimentos internos*/
+    box-sizing: border-box; /*Garante que as bordas e paddings não aumentem o tamanho total do elemento*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*Define as fontes para todos os elementos*/
+}
+
+/*Armazenar variáveis globais de css para fácil reutilização*/
+:root{
+    --primary-color: #ff7e5f;
+    --primary-hover: #eb6b4c;
+    --secondary-color: #feb47b;
+    --dark-color: #2c3e50;
+    --light-color: #f9f9fb;
+    --white: #ffffff;
+    --gray: #666666;
+    --border-radius: 12px;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+body{
+    background-color: var(--light-color); /*Cor de fundo da página*/
+    color: var(--dark-color); /*Cor do texto*/
+    line-height: 1.6; /*Espaçamento entre as linhas de texto*/
+    display: flex; /*Atvia flexbox | Posicionamento dos elementos - container*/
+    flex-direction: column; /*Organizar os elementos dentro do container*/
+    min-height: 100vh; /*Garante 100% da altura da tela do dispostivo*/
+}
+
+header{
+    background-color: var(--white); /*Fundo branco no topo da página*/
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /*Sombra bem leve na parte inferior do topo*/
+    position: sticky; /*O menu fica fixo*/
+    top: 0; /*Gruda a barra de rolagem exatamente no topo*/
+    z-index: 1000; /*Garante que o menu fique acima de todos os outros elementos*/
+}
+
+nav{
+    max-width: 1200px; /*Largura máxima do menu*/
+    margin: 0 auto; /*Centralizar o menu*/
+    display: flex;
+    justify-content: space-between; /*Logo (imagem) - esquerda | Os links - direita*/
+    align-items: center;/*Alinhamentos do texto centralizado*/
+    padding: 1rem 2rem; /*Espaçamento interno*/
+}
+
+.nav-menu{
+    display: flex;
+    flex-direction: row;
+    list-style: none; /*Remove os pontos da lista*/    
+    gap: 1.5rem;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+    transition: color 0.3s ease, backgroun-color 0.3s ease; /*Transição suave das cores ao passar o mouse no elemento*/
+}
+
+.nav-link:hover, .nav-link.active{
+    color: var(--primary-color);
+    background-color: #fff4f1;
+}
+
+.logo-icon{
+    width: 32px; /*Largura*/
+    height: 32px; /*Altura*/
+}
+
+.logo{
+    font-size: 1.6rem; /*Tamanho da fonte do texto da logo*/
+    font-weight: 700; /*Negrito no texto*/
+    color: var(--primary-color);
+    text-decoration: none; /*Tira o sublinhado do texto do link*/
+    display: flex;
+    align-items: center;
+    gap: 8px; /*Espaço entre a imagem e o texto*/
+}
+
+.main{
+    flex: 1; /*Cescer e empurrar o rodapé*/
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem; 
+}
+
+.hero{
+    background: linear-gradient(135deg, #ec542e, #feb47b);
+    color: var(--dark-color);
+    border-radius: var(--border-radius);
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    box-shadow: var(--shadow);
+    min-height: 80vh; /* Ajuste a porcentagem conforme o espaço do seu header/footer */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    align-items: center;    /* Centraliza o conteúdo horizontalmente */
+}
+
+
+
+.btn-primary{
+    background-color: var(--white);
+    color: var(--primary-color);
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer; /* Transforma o ponteiro do mouse em mão */
+    transition: all 0.3s ease; /* Suavisa o efeito hover do botão */ 
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary:hover{
+    transform: translateY(-2px); /* Levanta o botão 2px para cima; */
+    box-shadow: 0 5px 15px rgb(0,0,0,0.15);
+}
+
+footer{
+    background-color: var(--dark-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+footer p{
+    font-size: 0.9rem;
+    opacity: 0.8;
+
+}
+
+/* Parte central da página animais.html */
+
+.card-grid{
+    display: grid; /* Ativa CSS Grid */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Cria automaticamente colunas de 280px */
+    gap: 2rem;
+}
+
+.card{
+    background-color: var(--white);
+    border-radius: var(--border-radius); 
+    overflow: hidden; /* Faz com que o conteúdo interno não ultrapasse as bordas */
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.card:hover{
+    transform: translateY(-5);
+}
+
+.card-img-placeholder{
+    width: 100%;
+    height: 200px;
+    background-color: #dfdbdb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+
+}
+
+.card-img-placeholder img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: var(--border-radius) var(--border-radius) 0 0; 
+}
+
+.card-body{
+    padding: 1.5rem;
+}
+
+.card-tag{
+    display: inline-block;
+    background-color: #fff4f1;
+    color: var(--primary-color);
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-text{
+    color: var(--gray);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.card-title{
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem; 
+}
+
+.btn-card{
+    display: block;
+    text-align: align;
+    width: 100%;
+    padding: 0.6rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 0.59rem;
+}
+
+.animal-title{
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 0.8rem;
+}
+
+/*Formulário de contato*/
+
+/* Container do formulário */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    background-color: #f7f9f8; /* Tom suave e levemente esverdeado/acinzentado (relaxante) */
+    border-radius: var(--border-radius, 12px);
+    box-shadow: var(--shadow, 0 4px 20px rgba(0, 0, 0, 0.05));
+    font-family: sans-serif;
+}
+
+/* Espaçamento entre os campos */
+form div {
+    margin-bottom: 1.5rem;
+}
+
+/* Estilo dos rótulos (Labels) */
+form label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #4a5568; /* Cinza suave, menos agressivo que o preto puro */
+}
+
+/* Estilo comum para Inputs, Select e Textarea */
+form input[type="text"],
+form input[type="email"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    color: #2d3748;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-sizing: border-box; /* Garante que o padding não estoure a largura */
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+/* Altura específica e redimensionamento seguro para o Textarea */
+form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Efeito suave ao focar nos campos */
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #a3b899; /* Um tom verde-sálvia suave ao focar */
+    box-shadow: 0 0 0 3px rgba(163, 184, 153, 0.15); /* Brilho suave */
+}
+
+/* Botão de Enviar */
+form input[type="submit"] {
+    width: 100%;
+    padding: 0.85rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #718096; /* Cinza/Azulado neutro e calmo */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+/* Efeito ao passar o mouse no botão */
+form input[type="submit"]:hover {
+    background-color: #5a6578;
+}
+
+/* Efeito ao clicar no botão */
+form input[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+/*Sobre*/
+
+.main-sobre {
+    max-width: 680px;         
+    margin: 40px auto;         
+    padding: 40px;             
+    background-color: #ffffff; 
+    border-radius: 12px;        
+}
+
+.main-sobre h2 {
+    color: #cc6b49;            
+    font-size: 1.8rem;         
+    font-weight: 600;
+    margin-bottom: 24px;       
+    text-align: left;          
+}
+
+.main-sobre p {
+    color: #555555;            
+    font-size: 1rem;
+    line-height: 1.8;          
+    margin-bottom: 20px;       
+}
+
+/* Remove a margem do último parágrafo */
+.main-sobre p:last-child {
+    margin-bottom: 0;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Elementos do Formulário HTML</title>
+    </head>
+    <body>
+        <!--Formulários são elementos HTML e servem para entrada de dados-->
+
+        <h1>Elementos de Formulário</h1>
+        <form>
+
+            <label>Nome:</label>
+            <input type="text" placeholder="Fulano da Silva" required="true">
+            <br>
+
+            <label>E-mail:</label>
+            <input type="email" placeholder="fulano@email.com" required="true">
+            <br>
+
+            <label>Senha:</label>
+            <input type="password" placeholder="fulanosecreto123" required="true" maxlength="8">
+            <br>
+
+            <label>Data de Nascimento:</label>
+            <input type="date">
+            <br>
+
+            <!--Type="radio" é um seletor único, onde só pode ser escolhido apenas uma das opções-->
+            <!--Para este typo de dado, é necessário indicar um Name, para clasificar os inputs como da mesma família-->
+            <label>Gênero:</label>
+            <input type="radio" name="genero"> Masculino
+            <input type="radio" name="genero"> Feminino
+            <br>
+
+            <label>Lazeres:</label>
+            <br>
+            <input type="checkbox" name="lazeres">Vídeogame
+            <br>
+            <input type="checkbox" name="lazeres">Música
+            <br>
+            <input type="checkbox" name="lazeres">Ler
+            <br>
+
+            <label>Hora:</label>
+            <input type="time">
+            <br>
+
+            <label>Quantidade:</label>
+            <input type="number">
+            <br>
+
+            <!--O Select define que é uma caixa de seleção, já o Option é as alternativas disponíveis-->
+            <label>Profissão:</label>
+            <select>
+                <option>-</option>
+                <option>Professor</option>
+                <option>Mecânico</option>
+                <option>Programador</option>
+                <option>Encanador</option>
+            </select>
+            <br>
+
+            <label>Observação:</label>
+            <textarea placeholder="Escreva um elogio ou sugestão."></textarea>
+            <br>
+
+            <input type="submit" value="Cadastrar">
+
+        </form>
+    </body>
+</html>
